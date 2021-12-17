@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * @property-read bool $published
@@ -42,5 +43,10 @@ class Post extends Model
     public function scopePublished(Builder $query): void
     {
         $query->whereNotNull('published_at')->whereDate('published_at', '<=', now());
+    }
+
+    public function category(): BelongsTo
+    {
+        return $this->belongsTo(Category::class);
     }
 }
