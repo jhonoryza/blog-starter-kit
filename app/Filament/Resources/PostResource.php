@@ -22,6 +22,10 @@ class PostResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-newspaper';
 
+    protected static ?string $navigationGroup = 'Blog';
+
+    protected static ?int $navigationSort = 0;
+
     public static function form(Form $form): Form
     {
         return $form
@@ -57,6 +61,8 @@ class PostResource extends Resource
                     ->label('Published Date & Time')
                     ->dateTime()
                     ->sortable(),
+                Tables\Columns\TextColumn::make('category.title')
+                    ->url(fn ($record) => CategoryResource::getUrl('edit', ['record' => $record->category])),
             ])
             ->filters([
                 Tables\Filters\Filter::make('published')
