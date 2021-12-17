@@ -11,7 +11,7 @@
     <title>@isset($title) {{ $title }} &mdash; @endisset{{ config('app.name') }}</title>
 </head>
 <body class="antialiased bg-white font-sans pb-12">
-    <nav class="flex items-center justify-between max-w-3xl p-4 mx-auto">
+    <nav class="flex items-center justify-between max-w-3xl py-4 mx-auto">
         <span class="inline-flex items-center justify-center w-10 h-10 bg-gray-100 rounded-lg">
             🚀
         </span>
