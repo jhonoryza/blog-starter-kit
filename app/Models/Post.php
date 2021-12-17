@@ -2,11 +2,15 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Str;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
+/**
+ * @property-read bool $published
+ */
 class Post extends Model
 {
     use HasFactory;
@@ -28,5 +32,15 @@ class Post extends Model
                 $post->slug = Str::slug($post->title);
             }
         });
+    }
+
+    public function getPublishedAttribute(): bool
+    {
+        return $this->published_at?->isPast();
+    }
+
+    public function scopePublished(Builder $query): void
+    {
+        $query->whereNotNull('published_at')->whereDate('published_at', '<=', now());
     }
 }

@@ -20,7 +20,7 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $name = $this->faker->words(asText: true),
+            'title' => $this->faker->words(asText: true),
             'content' => $this->faker->realText(),
         ];
     }
