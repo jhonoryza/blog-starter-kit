@@ -40,6 +40,11 @@ class Post extends Model
         return $this->published_at?->isPast();
     }
 
+    public function getFormattedContentAttribute(): string
+    {
+        return Str::markdown($this->content);
+    }
+
     public function scopePublished(Builder $query): void
     {
         $query->whereNotNull('published_at')->whereDate('published_at', '<=', now());

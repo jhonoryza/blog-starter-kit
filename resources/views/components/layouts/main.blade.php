@@ -10,7 +10,7 @@
     <script src="{{ mix('js/app.js') }}" defer></script>
     <title>@isset($title) {{ $title }} &mdash; @endisset{{ config('app.name') }}</title>
 </head>
-<body class="antialiased bg-white font-sans">
+<body class="antialiased bg-white font-sans pb-12">
     <nav class="flex items-center justify-between max-w-3xl p-4 mx-auto">
         <span class="inline-flex items-center justify-center w-10 h-10 bg-gray-100 rounded-lg">
             🚀
@@ -22,7 +22,7 @@
             </li>
 
             <li>
-                <a class="px-3 py-2 rounded-lg" href="">Archive</a>
+                <a class="px-3 py-2 rounded-lg" href="{{ route('posts.index') }}">Archive</a>
             </li>
 
             <li>
@@ -32,5 +32,9 @@
             </li>
         </ul>
     </nav>
+
+    <main class="max-w-3xl mx-auto">
+        {{ $slot }}
+    </main>
 </body>
 </html>
