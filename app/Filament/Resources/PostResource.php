@@ -12,6 +12,7 @@ use Filament\Resources\Resource;
 use Filament\Forms\Components\TextInput;
 use App\Filament\Resources\PostResource\Pages;
 use App\Filament\Resources\PostResource\RelationManagers;
+use Filament\Forms\Components\BelongsToSelect;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\MarkdownEditor;
 
@@ -39,6 +40,10 @@ class PostResource extends Resource
                 DateTimePicker::make('published_at')
                     ->label('Published Date & Time')
                     ->nullable(),
+                BelongsToSelect::make('category_id')
+                    ->label('Category')
+                    ->relationship('category', 'title')
+                    ->searchable(),
             ]);
     }
 
