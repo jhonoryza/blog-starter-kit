@@ -3,7 +3,7 @@
         Posts
     </h2>
 
-    <section class="mt-16">
+    <section class="mt-16 space-y-8">
         @foreach($posts as $post)
             <article class="flex items-center justify-between">
                 <a href="{{ route('posts.show', $post) }}" class="text-blue-500 hover:text-blue-600 focus:text-blue-600 hover:underline transition-colors ease-in-out duration-200">
