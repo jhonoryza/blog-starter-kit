@@ -33,7 +33,7 @@
         </ul>
     </nav>
 
-    <main class="max-w-3xl mx-auto">
+    <main class="max-w-3xl mx-auto mt-24">
         {{ $slot }}
     </main>
 </body>
