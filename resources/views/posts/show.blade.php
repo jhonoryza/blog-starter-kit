@@ -1,19 +1,15 @@
 <x-layouts.main :title="$post->title">
-    <section>
-        <div class="px-4 py-24 mx-auto sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center">
-                <h1
-                    class="text-3xl font-extrabold text-transparent sm:text-6xl bg-clip-text bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"
-                >
-                    {{ $post->title }}
-                </h1>
-            </div>
+    <div class="px-4 pt-12 pb-24 mx-auto sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center">
+            <h1
+                class="text-3xl font-extrabold text-transparent sm:text-6xl bg-clip-text bg-gradient-to-r from-blue-100 via-blue-400 to-blue-700"
+            >
+                {{ $post->title }}
+            </h1>
         </div>
-    </section>
+    </div>
 
-    <section>
-        <div class="prose prose-blue">
-            {!! $post->formatted_content !!}
-        </div>
-    </section>
+    <article class="prose prose-blue">
+        {!! $post->formatted_content !!}
+    </article>
 </x-layouts.main>

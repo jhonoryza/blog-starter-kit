@@ -877,11 +877,31 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-from: #86efac;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(134 239 172 / 0));
 }
+.from-blue-300 {
+  --tw-gradient-from: #93c5fd;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(147 197 253 / 0));
+}
+.from-blue-100 {
+  --tw-gradient-from: #dbeafe;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(219 234 254 / 0));
+}
 .via-blue-500 {
   --tw-gradient-stops: var(--tw-gradient-from), #3b82f6, var(--tw-gradient-to, rgb(59 130 246 / 0));
 }
+.via-blue-400 {
+  --tw-gradient-stops: var(--tw-gradient-from), #60a5fa, var(--tw-gradient-to, rgb(96 165 250 / 0));
+}
 .to-purple-600 {
   --tw-gradient-to: #9333ea;
+}
+.to-blue-600 {
+  --tw-gradient-to: #2563eb;
+}
+.to-blue-900 {
+  --tw-gradient-to: #1e3a8a;
+}
+.to-blue-700 {
+  --tw-gradient-to: #1d4ed8;
 }
 .bg-clip-text {
   -webkit-background-clip: text;
@@ -919,6 +939,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pb-12 {
   padding-bottom: 3rem;
+}
+.pt-24 {
+  padding-top: 6rem;
+}
+.pb-24 {
+  padding-bottom: 6rem;
+}
+.pt-12 {
+  padding-top: 3rem;
 }
 .text-center {
   text-align: center;
