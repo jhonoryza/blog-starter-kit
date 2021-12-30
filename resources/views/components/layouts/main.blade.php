@@ -10,8 +10,8 @@
     <script src="{{ mix('js/app.js') }}" defer></script>
     <title>@isset($title) {{ $title }} &mdash; @endisset{{ config('app.name') }}</title>
 </head>
-<body class="antialiased bg-white font-sans">
-    <nav class="flex items-center justify-between max-w-3xl py-4 mx-auto">
+<body class="flex flex-col min-h-screen antialiased bg-white font-sans">
+    <nav class="w-full flex items-center justify-between max-w-3xl py-4 mx-auto">
         <span class="inline-flex items-center justify-center w-10 h-10 bg-gray-100 rounded-lg">
             🚀
         </span>
@@ -33,7 +33,7 @@
         </ul>
     </nav>
 
-    <main class="max-w-3xl mx-auto mt-24">
+    <main class="flex-1 w-full max-w-3xl mx-auto mt-24">
         {{ $slot }}
     </main>
 
