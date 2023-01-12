@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Category;
 use App\Models\Post;
 use DateTimeInterface;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -22,6 +23,7 @@ class PostFactory extends Factory
         return [
             'title' => $this->faker->words(asText: true),
             'content' => $this->faker->realText(),
+            'category_id' => Category::factory()
         ];
     }
 }
